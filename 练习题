@@ -1,0 +1,46 @@
+#include "stdio.h"
+#include "windows.h"
+int main(){
+    system("chcp 65001 > nul");
+    华氏温度转摄氏温度
+    double h,s;
+    printf("请输入华氏温度：");
+    scanf("%lf",&h);
+    s=5.0/9.0*(h-32);
+    printf("%lf",s);
+
+    加减乘除
+    int a,b;
+    printf("请输入二个整数：");
+    scanf("%d %d",&a,&b);
+    printf("%d+%d=%d\n",a,b,a+b);
+    printf("%d-%d=%d\n",a,b,a-b);
+    printf("%d*%d=%d\n",a,b,a*b);
+    printf("%d/%d=%d\n",a,b,a/b);
+
+    计算圆面积
+#define PI 3.14159
+    double radius,area;
+    printf("输入圆的半径：\n");
+    scanf("%lf",&radius);
+    area= PI*radius*radius;
+    printf("圆面积：%.2lf",area);
+
+int a,b,c,sum;
+    printf("输入一个3位正整数：\n");
+    scanf("%d",&sum);
+    a=sum/100;
+    b=sum/10%10;
+    c=sum%10;
+    printf("%d",a+b+c);
+
+判断闰年
+int year,is;
+    printf("输入年份：\n");
+    scanf("%d",&year);
+    is=(year % 4==0 && year % 100 !=0)||(year%400==0);
+    is? printf("闰年"): printf("平年");
+
+
+    return 0;
+}
